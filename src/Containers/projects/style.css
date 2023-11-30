@@ -1,0 +1,114 @@
+.project {
+  padding: 2rem 0;
+  scroll-margin-top: 5.5rem;
+}
+
+.project-container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.project-img-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+}
+.project-img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  transition: all 0.6s var(--transition);
+}
+
+.project-items:hover .project-img {
+  transform: scale(1.04);
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  margin-bottom: 30px;
+}
+.project-list-item {
+  color: var(--bg-dark);
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.7s var(--transition);
+  margin-top: 50px;
+}
+
+.project-list-item::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  max-width: 60%;
+  background-color: var(--yellow-theme-main-colore);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all 0.3s var(--transition);
+}
+
+.project-list-item:hover::before {
+  width: 50px;
+}
+
+.active-work {
+  color: var(--danger-color);
+}
+
+.active-work::before,
+.project-list-item:hover::before {
+  width: 40px;
+}
+.swiper-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: var(--yellow-theme-sub-text-color);
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  background-color: var(--yellow-theme-main-colore);
+}
+.swiper-wrapper {
+  margin-bottom: 52px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 70px;
+  font-size: 2rem;
+  background: transparent;
+  color: var(--yellow-theme-main-colore);
+  border: 1.5px solid;
+  border-color: var(--yellow-theme-main-colore);
+  border-radius: 25px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--yellow-theme-main-colore);
+    color: #000000;
+  }
+}
+.name-projects {
+  color: var(--yellow-theme-main-colore);
+}
